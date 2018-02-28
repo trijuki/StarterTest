@@ -18,6 +18,8 @@ class ViewController2: UIViewController {
     @IBOutlet weak var activateBtn: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
+    var isSwitchOn:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,8 +48,10 @@ class ViewController2: UIViewController {
     @IBAction func didSwitchChange(_ sender: Any) {
         if self.switchBtn.isOn {
             print("is on")
+            isSwitchOn = true
         }else{
             print("is off")
+            isSwitchOn = false
         }
     }
     
